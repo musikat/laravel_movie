@@ -22,7 +22,7 @@ Route::get('/genre',[PagesController::class,'genre']);
 Route::get('/review',[PagesController::class,'review']);
 Route::get('/login',[PagesController::class,'login']);
 Route::get('/signup',[PagesController::class,'signup']);
-// End FrontTT
+// End FrontTT 123
 
 // Admin
 Route::get('/admin/add',[PagesController::class,'AdminAdd']);
