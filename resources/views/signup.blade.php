@@ -45,7 +45,7 @@ input {
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<a href="index.php" class="logo"><strong>Moviefy</strong> <span>by PHP OOP</span></a>
+						<a href="{{url('home')}}" class="logo"><strong>Moviefy</strong> <span>by PHP OOP</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -54,10 +54,10 @@ input {
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-							<li><a href="index.php">Home</a></li>
+							<li><a href="{{url('home')}}">Home</a></li>
 						</ul>
 						<ul class="actions stacked">
-							<li><a href="login.php" class="button fit">Log In</a></li>
+							<li><a href="{{url('login')}}" class="button fit">Log In</a></li>
 						</ul>
 					</nav>
 
@@ -116,10 +116,10 @@ input {
 
             <div class="action">
                 <button name="submit" class="primary"  class="button" type="submit" >Submit</button>
-                <button  onclick="window.location.href='login.php';" name="return"   type="submit">Return</button>
+                <button  onclick="window.location.href='{{url('user/home')}}';" name="return"   type="submit">Return</button>
             </div>
 </div> 
-                
+href="{{url('user/home')}}"
         
 
 </div>
