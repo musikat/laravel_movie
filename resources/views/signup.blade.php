@@ -68,9 +68,11 @@ input {
     
 <!-- Form -->
           <?php
+		  /*
               include 'model.php';
               $model = new Model();
               $insert = $model->insert();
+			  */
           ?>
 			<h3>CREATE ACCOUNT</h3>
 			<form action ="" method = "post">

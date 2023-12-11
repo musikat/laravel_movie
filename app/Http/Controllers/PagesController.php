@@ -20,6 +20,9 @@ class PagesController extends Controller
     public function login(){
         return view('login');
     }
+    public function signup(){
+        return view('signup');
+    }
     //admin
     public function AdminAdd(){
         return view('admin.add');

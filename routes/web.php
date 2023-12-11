@@ -15,10 +15,13 @@ use App\Http\Controllers\PagesController;
 |
 */
 // Front
+//Route::get('/', PagesController::class, 'index');
+
 Route::get('/home',[PagesController::class,'index']);
 Route::get('/genre',[PagesController::class,'genre']);
 Route::get('/review',[PagesController::class,'review']);
 Route::get('/login',[PagesController::class,'login']);
+Route::get('/signup',[PagesController::class,'signup']);
 // End Front
 
 // Admin
