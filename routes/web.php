@@ -18,7 +18,7 @@ use App\Http\Controllers\PagesController;
 Route::get('/home',[PagesController::class,'index']);
 Route::get('/genre',[PagesController::class,'genre']);
 Route::get('/review',[PagesController::class,'review']);
-Route::get('/login1',[PagesController::class,'login1']);
+Route::get('/login',[PagesController::class,'login']);
 // End Front
 
 // Admin
