@@ -15,7 +15,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<a href="home.php" class="logo"><strong>Moviefy</strong> <span>by PHP OOP</span></a>
+						<a href="{{url('user/home')}}" class="logo"><strong>Moviefy</strong> <span>by PHP OOP</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -24,8 +24,8 @@
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-							<li><a href="home.php">Home</a></li>
-                            <li><a href="dashboard.php">Dashboard</a></li>
+                        <li><a href="{{url('user/home')}}">Home</a></li>
+                        <li><a href="{{url('user/dashboard')}}">Dashboard</a></li>
 						</ul>
 						<ul class="actions stacked">
                             <?php 
@@ -78,14 +78,14 @@
 <div class="card">
 <div class="col-4">
 
-    <a href="review_log.php?id=<?php //echo $row['filmID']; ?>" >
+    <a href="{{url('user/review')}}<?php //echo $row['filmID']; ?>" >
     <div class="img1" ><span class="image fit"><img src="<?php //echo $row['img']; ?>" alt="" /></span></div>
 
     <div class="title"><?php //echo $row['title']; ?>
           <br> <p><?php //echo $row['date']; ?></p>
           </div>
     <div class="text"><?php //echo $row['plot']; ?></div>
-    <a href="genre_log.php"><div class="catagory">Movie<i        class="fas fa-film"></i></div></a>
+    <a href="{{url('user/genre')}}"><div class="catagory">Movie<i        class="fas fa-film"></i></div></a>
     <a href="#"><div class="views"><?php //echo round($rate, 1);?><i class="fas fa-star" style="color: #f5b50a;"></i> </div></a>
   </a>
 </div>

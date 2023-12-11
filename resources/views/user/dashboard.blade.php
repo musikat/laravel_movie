@@ -19,7 +19,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<a href="index.php" class="logo"><strong>Moviefy</strong> <span>by PHP OOP</span></a>
+						<a href="{{url('user/home')}}" class="logo"><strong>Moviefy</strong> <span>by PHP OOP</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -28,8 +28,8 @@
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-							<li><a href="home.php">Home</a></li>
-                            <li><a href="dashboard.php">Dashboard</a></li>
+							<li><a href="{{url('user/home')}}">Home</a></li>
+                            <li><a href="{{url('user/dashboard')}}">Dashboard</a></li>
 						</ul>
 						<ul class="actions stacked">
                             <?php 
@@ -103,7 +103,7 @@
                                     <h5 class="right"><?php //echo $row['review_date']; ?></h5>
 									<p><?php //echo $row['review']; ?></p>
 									<ul class="actions">
-										<li><a href="rev_edit.php?id=<?php //echo $row['reviewid']; ?>" class="button next">Edit</a></li>
+										<li><a href="{{url('user/edit')}}<?php //echo $row['reviewid']; ?>" class="button next">Edit</a></li>
 									</ul>
 								</div>
 							</section>

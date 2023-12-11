@@ -22,19 +22,21 @@ img {
 	<body class="is-preload">
 
     <?php
+    /*
    include('session.php');
     $cid = $_SESSION['login_user']; 
         $uname=$_SESSION['username'];
         $userid=$_SESSION['userid'];
     date_default_timezone_set('Asia/Manila');
     $d = date("Y-m-d");
+    */
     ?>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<a href="index.php" class="logo"><strong>Moviefy</strong> <span>by PHP OOP</span></a>
+						<a href="{{url('user/home')}}" class="logo"><strong>Moviefy</strong> <span>by PHP OOP</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -43,8 +45,8 @@ img {
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-							<li><a href="home.php">Home</a></li>
-                            <li><a href="dashboard.php">Dashboard</a></li>
+                        <li><a href="{{url('user/home')}}">Home</a></li>
+                        <li><a href="{{url('user/dashboard')}}">Dashboard</a></li>
 						</ul>
 						<ul class="actions stacked">
                             <?php 
@@ -144,13 +146,14 @@ img {
 <div class="col-12">
     <h3>Rating</h3>
 <?php 
+/*
     $row1 = $model->fetch_ave($id);
       if(!empty($row1)){
       $rate=$row1['avg(rating)'];
       }
-    
+    */
     ?>    
-    <p><?php echo round($rate, 1);?></p>
+    <p><?php //echo round($rate, 1);?></p>
     <div class="col-4 col-12-xsmall">
     <input type="text" name="rate" id="rate" value="" placeholder="Rating">
     </div>

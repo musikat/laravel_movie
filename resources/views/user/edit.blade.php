@@ -25,8 +25,8 @@
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-							<li><a href="home.php">Home</a></li>
-                            <li><a href="dashboard.php">Dashboard</a></li>
+                        <li><a href="{{url('user/home')}}">Home</a></li>
+                        <li><a href="{{url('user/dashboard')}}">Dashboard</a></li>
 						</ul>
 						<ul class="actions stacked">
                             <?php 

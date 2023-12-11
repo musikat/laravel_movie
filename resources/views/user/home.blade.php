@@ -109,7 +109,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<a href="model.php" class="logo"><strong>Moviefy</strong> <span>by PHP OOP</span></a>
+						<a href="{{url('user/home')}}" class="logo"><strong>Moviefy</strong> <span>by PHP OOP</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -118,8 +118,8 @@
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-							<li><a href="home.php">Home</a></li>
-                            <li><a href="dashboard.php">Dashboard</a></li>
+                        <li><a href="{{url('user/home')}}">Home</a></li>
+                        <li><a href="{{url('user/dashboard')}}">Dashboard</a></li>
 						</ul>
 						<ul class="actions stacked">
                             <?php 
@@ -150,28 +150,36 @@
         <!--radio buttons end-->
         <!--slide images start-->
         <div class="slide first">
-          <img src="./images/genre/action/3.jpg" alt="">
+          <img src="{{ asset('images/genre/action/3.jpg') }}" alt="">
+          
         </div>
         <div class="slide">
-          <img src="./images/genre/adventure/1.jpg" alt="">
+          <img src="{{ asset('images/genre/adventure/1.jpg') }}" alt="">
+          
         </div>
         <div class="slide">
-          <img src="./images/genre/comedy/3.jpg" alt="">
+          <img src="{{ asset('images/genre/comedy/3.jpg') }}" alt="">
+          
         </div>
         <div class="slide">
-          <img src="./images/genre/horror/1.jpg" alt="">
+          <img src="{{ asset('images/genre/horror/1.jpg') }}" alt="">
+          
         </div>
         <div class="slide">
-          <img src="./images/genre/romance/3.jpg" alt="">
+          <img src="{{ asset('images/genre/romance/3.jpg') }}" alt="">
+          
         </div>
         <div class="slide">
-          <img src="./images/genre/fantacy/1.jpg" alt="">
+          <img src="{{ asset('images/genre/fantacy/1.jpg') }}" alt="">
+          
         </div>
         <div class="slide">
-          <img src="./images/genre/scifi/1.jpg" alt="">
+          <img src="{{ asset('images/genre/scifi/1.jpg') }}"alt="">
+          
         </div>
         <div class="slide">
-          <img src="./images/genre/drama/2.jpg" alt="">
+          <img src="{{ asset('images/genre/drama/2.jpg') }}" alt="">
+          
         </div>
         <!--slide images end-->
         <!--automatic navigation start-->
@@ -216,73 +224,81 @@
 							<section id="one" class="tiles">
 								<article>
 									<span class="image">
-										<img src="./images/genre/action/1.jpg" alt="Action" />
+										<img src="{{ asset('images/genre/action/1.jpg') }}" alt="Action" />
+                    
 									</span>
 									<header class="major">
-										<h3><a href="genre_log.php?genre=1" class="link">Action</a>
+                  <h3><a href="{{url('user/genre')}}" class="link">Action</a> <!-- 1 -->
                                         </h3>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="./images/genre/comedy/1.jpg" alt="Comedy" />
+										<img src="{{ asset('images/genre/comedy/1.jpg') }}"  alt="Comedy" />
+                     
 									</span>
 									<header class="major">
-										<h3><a href="genre_log.php?genre=3" class="link">Comedy</a>
+                  <h3><a href="{{url('user/genre')}}" class="link">Comedy</a> <!-- 3 -->
                                         </h3>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="./images/genre/adventure/2.jpg" alt="Adventure" />
+										<img src="{{ asset('images/genre/adventure/2.jpg') }}" alt="Adventure" />
+                     
 									</span>
 									<header class="major">
-										<h3><a href="genre_log.php?genre=2" class="link">Adventure</a>
+                  <h3><a href="{{url('user/genre')}}" class="link">Adventure</a> <!-- 2 -->
                                         </h3>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="./images/genre/horror/2.jpg" alt="Horror" />
+										<img src="{{ asset('images/genre/horror/2.jpg') }}" alt="Horror" />
+                    
 									</span>
 									<header class="major">
-										<h3><a href="genre_log.php?genre=6" class="link">Horror</a>
+                  <h3><a href="{{url('user/genre')}}" class="link">Horror</a> <!-- 6 -->
                                         </h3>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="./images/genre/drama/2.jpg" alt="Drama" />
+										<img src="{{ asset('images/genre/drama/2.jpg') }}" alt="Drama" />
+                    
 									</span>
 									<header class="major">
-										<h3><a href="genre_log.php?genre=4" class="link">Drama</a>
+                  <h3><a href="{{url('user/genre')}}" class="link">Drama</a> <!-- 4 -->
                                         </h3>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="./images/genre/romance/2.jpg" alt="Romance" />
+										<img src="{{ asset('images/genre/romance/2.jpg') }}" alt="Romance" />
+                    
 									</span>
 									<header class="major">
-										<h3><a href="genre_log.php?genre=7" class="link">Romance</a>
+                  <h3><a href="{{url('user/genre')}}" class="link">Romance</a> <!-- 7 -->
                                         </h3>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="./images/genre/scifi/1.jpg" alt="Scifi" />
+										<img src="{{ asset('images/genre/scifi/1.jpg') }}" alt="Scifi" />
+                    
 									</span>
 									<header class="major">
-										<h3><a href="genre_log.php?genre=8" class="link">Sci-Fi</a>
+                  <h3><a href="{{url('user/genre')}}" class="link">Scifi</a> <!-- 8 -->
                                         </h3>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="./images/genre/fantacy/2.jpg" alt="Fantacy" />
+										<img src="{{ asset('images/genre/fantacy/2.jpg') }}" alt="Fantacy" />
+                    
 									</span>
 									<header class="major">
-										<h3><a href="genre_log.php?genre=5" class="link">Fantacy</a>
+                  <h3><a href="{{url('user/genre')}}" class="link">Fantacy</a> <!-- 5 -->
                                         </h3>
 
 									</header>
