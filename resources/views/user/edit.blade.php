@@ -2,12 +2,14 @@
 
 	<body class="is-preload">
     <?php
+    /*
     include('session.php');
     $cid = $_SESSION['login_user']; 
     $uname=$_SESSION['username'];
     $userid=$_SESSION['userid'];
     date_default_timezone_set('Asia/Manila');
     $d = date("Y-m-d");
+    */
     ?>
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -28,11 +30,13 @@
 						</ul>
 						<ul class="actions stacked">
                             <?php 
+                            /*
                             if($cid!=' '){
                                 echo "<li><a href='logout.php' class='button primary'>Log Out</a></li>";
                             }else{
                                 echo "<li><a href='login.php' class='button fit'>Log In</a></li>";
                             }
+                            */
                             ?>
 							
 						</ul>
@@ -43,7 +47,8 @@
 
 						<!-- One -->
           <?php
-              include 'model.php';
+             /*
+             include 'model.php';
               $model = new Model();
               $id = $_REQUEST['id'];
               $row = $model->edit($id);
@@ -72,27 +77,29 @@
                   }
                 }
               }
+              */
           ?>                        
         
 <section id="one">
     <form action="" method="post">
     <div class="inner">
           <?php
-    
+            /*
               $row = $model->fetch_rev1($id);
               if(!empty($row)){
+                */
           ?>
 
 				<header class="major">
-				        <h1><?php echo $row['film_title']; ?></h1>
+				        <h1><?php //echo $row['film_title']; ?></h1>
 				</header>
                                     
                 <div class="col-2 col-12-xsmall">
-				    <input type="text" name="rating" id="rating" value="<?php echo $row['rating']; ?>" placeholder="Rating">
+				    <input type="text" name="rating" id="rating" value="<?php //echo $row['rating']; ?>" placeholder="Rating">
 				</div>
                                     
             <div class="col-12 __web-inspector-hide-shortcut__">
-                    <textarea name="message" id="message" placeholder="User Review" rows="6"><?php echo $row['review']; ?></textarea>
+                    <textarea name="message" id="message" placeholder="User Review" rows="6"><?php //echo $row['review']; ?></textarea>
             </div>
                                     
                         <div class="col-12">
@@ -103,9 +110,11 @@
                         </div>
                                     
                         <?php
+                        /*
                             }else{
                             echo "<h1>No Data</h1>";
                           }
+                          */
                           ?>
     </div>
     </form>
@@ -119,13 +128,7 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    @include('admin.script')
 
 	</body>
 </html>
