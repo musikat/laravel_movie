@@ -3,10 +3,12 @@
 	<body class="is-preload">
 
     <?php
+    /*
    include('session.php');
     $cid = $_SESSION['login_user']; 
     date_default_timezone_set('Asia/Manila');
     $d = date("Y-m-d");
+    */
     ?>
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -27,11 +29,13 @@
 						</ul>
 						<ul class="actions stacked">
                             <?php 
+                            /*
                             if($cid!=' '){
                                 echo "<li><a href='logout.php' class='button primary'>Log Out</a></li>";
                             }else{
                                 echo "<li><a href='login.php' class='button fit'>Log In</a></li>";
                             }
+                            */
                             ?>
 							
 						</ul>
@@ -74,15 +78,15 @@
 <div class="card">
 <div class="col-4">
 
-    <a href="review_log.php?id=<?php echo $row['filmID']; ?>" >
-    <div class="img1" ><span class="image fit"><img src="<?php echo $row['img']; ?>" alt="" /></span></div>
+    <a href="review_log.php?id=<?php //echo $row['filmID']; ?>" >
+    <div class="img1" ><span class="image fit"><img src="<?php //echo $row['img']; ?>" alt="" /></span></div>
 
-    <div class="title"><?php echo $row['title']; ?>
-          <br> <p><?php echo $row['date']; ?></p>
+    <div class="title"><?php //echo $row['title']; ?>
+          <br> <p><?php //echo $row['date']; ?></p>
           </div>
-    <div class="text"><?php echo $row['plot']; ?></div>
+    <div class="text"><?php //echo $row['plot']; ?></div>
     <a href="genre_log.php"><div class="catagory">Movie<i        class="fas fa-film"></i></div></a>
-    <a href="#"><div class="views"><?php echo round($rate, 1);?><i class="fas fa-star" style="color: #f5b50a;"></i> </div></a>
+    <a href="#"><div class="views"><?php //echo round($rate, 1);?><i class="fas fa-star" style="color: #f5b50a;"></i> </div></a>
   </a>
 </div>
 </div>

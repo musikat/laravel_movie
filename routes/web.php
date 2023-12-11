@@ -33,6 +33,6 @@ Route::get('/admin/user',[PagesController::class,'AdminUser']);
 Route::get('/user/dashboard',[PagesController::class,'UserDashboard']);
 Route::get('/user/edit',[PagesController::class,'UserEdit']);
 Route::get('/user/genre',[PagesController::class,'UserGenre']);
-Route::get('/user/home',[PagesController::class,'UserHomme']);
+Route::get('/user/home',[PagesController::class,'UserHome']);
 Route::get('/user/review',[PagesController::class,'UserReview']);
 // End User

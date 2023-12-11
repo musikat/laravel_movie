@@ -3,6 +3,7 @@
 	<body class="is-preload">
 
     <?php
+	/*
    include('session.php');
     $cid = $_SESSION['login_user']; 
         $uname=$_SESSION['username'];
@@ -11,6 +12,7 @@
     $d = date("Y-m-d");
         $userid=3;
      include 'model.php';
+	 */
     ?>
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -31,11 +33,13 @@
 						</ul>
 						<ul class="actions stacked">
                             <?php 
-                            if($cid!=' '){
+                           /*
+						   if($cid!=' '){
                                 echo "<li><a href='logout.php' class='button primary'>Log Out</a></li>";
                             }else{
                                 echo "<li><a href='login.php' class='button fit'>Log In</a></li>";
                             }
+							*/
                             ?>
 							
 						</ul>
@@ -93,13 +97,13 @@
 							<section id="three">
 								<div class="inner">
 									<header class="major">
-										<h2><?php echo $row['film_title']; ?></h2>
-                                        <h5>Rating <?php echo $row['rating']; ?>/5</h5>
+										<h2><?php //echo $row['film_title']; ?></h2>
+                                        <h5>Rating <?php //echo $row['rating']; ?>/5</h5>
 									</header>
-                                    <h5 class="right"><?php echo $row['review_date']; ?></h5>
-									<p><?php echo $row['review']; ?></p>
+                                    <h5 class="right"><?php //echo $row['review_date']; ?></h5>
+									<p><?php //echo $row['review']; ?></p>
 									<ul class="actions">
-										<li><a href="rev_edit.php?id=<?php echo $row['reviewid']; ?>" class="button next">Edit</a></li>
+										<li><a href="rev_edit.php?id=<?php //echo $row['reviewid']; ?>" class="button next">Edit</a></li>
 									</ul>
 								</div>
 							</section>
