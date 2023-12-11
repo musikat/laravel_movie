@@ -96,11 +96,13 @@
 	<body class="is-preload">
 
     <?php
-   include('session.php');
+ /*
+ include('session.php');
     include('model.php');
     $cid = $_SESSION['login_user']; 
     date_default_timezone_set('Asia/Manila');
     $d = date("Y-m-d");
+    */
     ?>
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -121,11 +123,13 @@
 						</ul>
 						<ul class="actions stacked">
                             <?php 
+                            /*
                             if($cid!=' '){
                                 echo "<li><a href='logout.php' class='button primary'>Log Out</a></li>";
                             }else{
                                 echo "<li><a href='login.php' class='button fit'>Log In</a></li>";
                             }
+                            */
                             ?>
 							
 						</ul>
@@ -301,13 +305,8 @@
       }
     }, 3000);
     </script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+
+@include('admin.script')
 
 	</body>
 </html>

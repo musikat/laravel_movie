@@ -48,11 +48,13 @@ img {
 						</ul>
 						<ul class="actions stacked">
                             <?php 
+                            /*
                             if($cid!=' '){
                                 echo "<li><a href='logout.php' class='button primary'>Log Out</a></li>";
                             }else{
                                 echo "<li><a href='login.php' class='button fit'>Log In</a></li>";
                             }
+                            */
                             ?>
 							
 						</ul>
@@ -68,21 +70,24 @@ img {
 
     
           <?php
-             error_reporting(0);
+           /* 
+              error_reporting(0);
               include 'model.php';
               $model = new Model();
               $id = $_REQUEST['id'];
               $row = $model->fetch_single($id);
               if(!empty($row)){
+                */
           ?>
         
                     
-                <span class="image left"><img src="<?php echo $row['img']; ?>"alt="">
+                <span class="image left"><img src="<?php //echo $row['img']; ?>"alt="">
                   <h3>Genre</h3> 
                     <hr>
                     <p>
 
             <?php 
+            /*
             if($row['genre']==1){
                 echo 'Action';
             }elseif($row['genre']==2){
@@ -100,6 +105,7 @@ img {
             }elseif($row['genre']==8){
                 echo 'Sci-Fi';
             }
+            */
                         ?>
 
                     </p>
@@ -108,21 +114,22 @@ img {
                     
                     
                 <div class="inner">
-                    <h3><?php echo $row['title']; ?></h3>
+                    <h3><?php //echo $row['title']; ?></h3>
                     <hr>
-                  <p><?php echo $row['date']; ?></p>
+                  <p><?php //echo $row['date']; ?></p>
                   <h5 >Director</h5>
-                  <p ><?php echo $row['director']; ?></p>
+                  <p ><?php //echo $row['director']; ?></p>
                     <hr>
                   <h5 >Top Casts</h5>
-                  <p ><?php echo $row['cast']; ?>
+                  <p ><?php //echo $row['cast']; ?>
                   </p>
                     <hr>
                   <h5 >Plot Description</h5>
-                  <p ><?php echo $row['plot']; ?></p>
+                  <p ><?php //echo $row['plot']; ?></p>
                 </div>
                  
               <?php
+              /*
             }else{
             echo "no data";
           }
@@ -131,7 +138,7 @@ img {
                
             $insert = $model->rev_insert($userid,$id,$uname,$title,$d); 
                     
-
+            */
           ?>
 <form action="" method="post">        
 <div class="col-12">
@@ -154,7 +161,7 @@ img {
 <ul class="actions">
 
     <?php
- 
+ /*
     if($userid!=''){
                 $rev=$row['filmID'];
                 $rows = $model->fetch_rev($rev);
@@ -175,7 +182,7 @@ img {
      }else{ echo '<li><button type="submit" name="submitrev" class="primary">Submit</button></li>'; 
     }
     }
-    
+    */
 ?>
   
     
@@ -194,27 +201,31 @@ img {
       <h2>User Reviews</h2>  
       
 <?php
- 
+ /*
                 
                 $rows = $model->fetch_rev($id);
                 $i = 1;
       
                 if(!empty($rows)){
                   foreach($rows as $row){ 
+*/
 ?>
       <div class="box"> 
-        <h5 ><?php echo $row['rating']; ?>/5</h5>
-<blockquote><?php echo $row['review']; ?></blockquote>
+        <h5 ><?php //echo $row['rating']; ?>/5</h5>
+<blockquote><?php //echo $row['review']; ?></blockquote>
 <span><h5 >Reviewed by:</h5>
-<h6 ><?php echo $row['username']; ?></h6></span>
+<h6 ><?php //echo $row['username']; ?></h6></span>
                 
        </div>
       
         <?php
+        /*
             }
           }else{
             echo "no data";
-        }?>
+        }
+        */
+        ?>
       
 
     
@@ -227,14 +238,7 @@ img {
 
 </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+@include('admin.script')
 
 	</body>
 </html>

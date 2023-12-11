@@ -46,28 +46,31 @@
 
 					<section id="banner" class="style2">
                         <?php
+						/*
                               $model = new Model();
                               $row = $model->fetch_user($userid);
                               if(!empty($row)){
+
+								*/
                           ?>
 						<div class="inner">
 							<span class="image">
 								<img src="images/pic07.jpg" alt="" />
 							</span>
 							<header class="major">
-								<h1><?php echo $row['username']; ?></h1>
+								<h1><?php //echo $row['username']; ?></h1>
 							</header>
 							<div class="content">
                                 <ul class="alt">
-                                <p>Email:</p><li><?php echo $row['email']; ?></li>
-                                <p>Birthday:</p><li><?php echo $row['bday']; ?></li>   
-                                <p>Gender:</p><li><?php echo $row['gender']; ?></li>
+                                <p>Email:</p><li><?php //echo $row['email']; ?></li>
+                                <p>Birthday:</p><li><?php //echo $row['bday']; ?></li>   
+                                <p>Gender:</p><li><?php //echo $row['gender']; ?></li>
                                 </ul>
 							</div>
 						</div>
                         
                             <?php
-                            }
+                           // }
                           ?>  
 					</section>
 
@@ -77,11 +80,13 @@
 
 
                 <?php
-                $model = new Model();
+                /*
+				$model = new Model();
                 $rows = $model->fetch_user_review($userid);
 
                 if(!empty($rows)){
                   foreach($rows as $row){ 
+					*/
               ?>
 
 						<!-- Three -->
@@ -99,12 +104,14 @@
 								</div>
 							</section>
                             <?php 
-                                }
+                               /*
+							 }
                               }else{
                                 echo '<header class="major">
 										<h2>No Reviews</h2>
 									</header>';
                             }
+							*/
                               ?>
 					</div>
 
@@ -113,14 +120,7 @@
 
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			@include('admin.script')
 
 	</body>
 </html>

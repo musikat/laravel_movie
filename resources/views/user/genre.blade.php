@@ -53,6 +53,7 @@
 <div class="row gtr-10 gtr-uniform ">
     
           <?php
+          /*
                 include 'model.php';
                 $model = new Model();
                 $id = $_REQUEST['genre'];
@@ -66,7 +67,7 @@
               $rate=$row1['avg(rating)'];
               }
     
-   
+   */
               ?>
     
 
@@ -87,10 +88,12 @@
 </div>
 
     <?php
-                }
+            /*  
+            }
               }else{
                 echo "no data";
             }
+            */
         ?>  
   
 
@@ -119,11 +122,6 @@ function myFunction() {
 }
 </script>
     		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        @include('admin.script')
+        
 </html>
